@@ -21,5 +21,19 @@ $(".saveBtn").on("click", function() {
   $("#4pm .description").val(localStorage.getItem("4pm"));
   $("#5pm .description").val(localStorage.getItem("5pm"));
   
+  function trackCalender() {
+    //initialize current hour
+    const currHour = moment().hour();
+    
+    //loop through time elements of classes
+    $(".time-element").each(function () {
+      const hourBlock = parseInt($(this).attr("id").split("hour")[1]);
+      
+      console.log(hourBlock, currHour);
+     
+    })
+    
+  }
+  
   
 })
